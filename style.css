@@ -1,0 +1,39 @@
+body {
+    background-color: #121212;
+  /*  
+    background-image: url(./images/myFoto.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+*/
+}
+
+#div0 {
+    width: 10%;
+}
+
+#img0 {
+    width:10%;
+}
+
+h1 {
+    color: rgb(240, 240, 240);
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    color: rgb(201, 201, 201);
+    font-family: 'Oswald', sans-serif;
+}
+
+#div1 {
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 1000px;
+} 
+
+  #img1
+  {
+      width: 40%;
+  }
