@@ -1,39 +1,51 @@
-body {
+html, body {
+    /* height: 100%; */
+    margin: 0;
+}
+
+.container {
     background-color: #121212;
-  /*  
-    background-image: url(./images/myFoto.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr 50%;
+    height: 100vh;
+    grid-template-rows: 20% 30% 50%;
+    grid-template-areas:
+        "logo txt . . "
+        " . . . . "
+        " . . . img ";
 }
 
-#div0 {
-    width: 10%;
+.logo {
+    grid-area: logo;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
-#img0 {
-    width:10%;
+.name {
+    grid-area: txt;
+    margin-top: 20px;
 }
 
-h1 {
+#firstName {
     color: rgb(240, 240, 240);
     font-family: 'Oswald', sans-serif;
+    font-size: 36px;
 }
 
-h2 {
+#lastName {
     color: rgb(201, 201, 201);
     font-family: 'Oswald', sans-serif;
+    font-size: 27px;
 }
 
-#div1 {
-
+#myFoto {
+    grid-area: img;
     display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 1000px;
-} 
+    align-items: flex-end;
+    justify-content: flex-end;
+}
 
-  #img1
-  {
-      width: 40%;
-  }
+#myFoto img {
+    width: 80%;
+}
