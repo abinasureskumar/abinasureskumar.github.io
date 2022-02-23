@@ -1,0 +1,240 @@
+html, body {
+    /* height: 100%; */
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Homepage */
+
+.home-container {
+    background-color: #020008;
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr 50%;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 10% 10% 20% 50%;
+    grid-template-areas:
+        "logo name nav . "
+        " . . . . "
+        " . . . . "
+        " . . . . "
+        " up . . img ";
+}
+
+.logo {
+    grid-area: logo;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.name {
+    grid-area: name;
+    margin-top: 20px;
+}
+
+#firstName {
+    color: rgb(240, 240, 240);
+    font-family: 'Amatic SC', cursive;
+    font-weight: 550;
+    font-size: 46px;
+    white-space: nowrap;
+}
+
+#lastName {
+    color: rgba(201, 201, 201, 0.801);
+    font-family: 'Amatic SC', cursive;
+    font-size: 32px;
+}
+
+/*Navbar*/
+.navbar {
+    grid-area: nav;
+    grid-row: 1;
+    grid-column: 3 / 5;
+}
+
+.navbar {
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+}
+
+.navbar a {
+    float: right;
+    color: #a30506;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 50px 25px;
+    text-decoration: none;
+
+}
+
+.navbar a:hover {
+    background-color: transparent;
+    color: rgb(224, 224, 224);
+}
+
+/*Navbar*/
+
+/*Sidenav*/
+
+
+/*Sidenav*/
+
+.jobTitle {
+    grid-row: 4;
+    grid-column: 1 / 4;
+    margin-left: 60px;
+}
+
+#jobTitle {
+    color: rgb(240, 240, 240);
+    font-family: 'Amatic SC', cursive;
+    font-size: 80px;
+    white-space: nowrap;
+}
+
+#year {
+    color: rgb(240, 240, 240);
+    font-family: 'Amatic SC', cursive;
+    font-size: 60px;
+}
+
+#myFoto {
+    grid-area: img;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#myFoto img {
+    width: 80%;
+}
+
+#up {
+    grid-area: up;
+    width: 4%;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: none;
+    position: fixed;
+    cursor: pointer;
+}
+
+/*Games page*/
+
+.games-container {
+    /* background-color: #000d86; */
+    background-color: rgb(27, 27, 27);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+        " . . . . . . . "
+        " . card1 . card2 . card3 . "
+        " . . . . . . . ";
+}
+
+/* CARD */
+.card {
+    margin: 30px auto;
+    width: 350px;
+    height: 650px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .card-image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+}
+
+.card .card-image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+/* .card .card-title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+} */
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+        -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+    color: white;
+}
+
+@media all and (max-width: 500px) {
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
+
+.one {
+    grid-area: card1;
+}
+
+.two {
+    grid-area: card2;
+}
+
+.three {
+    grid-area: card3;
+}
+
+/* CARD */
+
+/*about me page*/
+
+.aboutMe-container {
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+        " . . . . . . . "
+        " . card1 . card2 . card3 . "
+        " . . . . . . . ";
+}
+
+/*contact page*/
+
+.contact-container {
+    background-color: #00867b;
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr 50%;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 15% 10% 25% 50%;
+    grid-template-areas:
+        " . . . . "
+        " . . . . "
+        " . . . . "
+        " . . . . ";
+}

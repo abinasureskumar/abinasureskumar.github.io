@@ -4,26 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <title>Abina Sureskumar</title>
+    <link rel="icon" href="./img/LTSmiley6.png" type="image/png" sizes="32x32">
 
 <body>
-    <div class="container">
+    <div class="arrowBack">
+        <!-- <button onclick="topFunction()" id="myBtn">Top</button> -->
+        <img id="up" src="img/up.png" onclick="topFunction()">
+    </div>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("up");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            window.setTimeout(function () {
+                location.href = "./index.html";
+            }, 500); //changes URL to home page
+        }
+    </script>
+    <div class="home-container">
         <div class="logo">
-            <img src="./images/LTSmiley6.png">
+            <img src="./img/LTSmiley6.png">
         </div>
         <div class="name">
             <span id="firstName">A b i n a</span><br />
             <span id="lastName">Sureskumar</span>
         </div>
+        <div class="navbar">
+            <a calss="active" href="./index.html" onclick="">Home</a>
+            <a href="#games">Games</a>
+            <a href="#aboutMe">About Me</a>
+            <a href="./games.html">Contact</a>
+        </div>
+        <div class="jobTitle">
+            <span id="jobTitle">Informatikerin Applikation</span><br />
+            <span id="year">Lernende im 2.Lehrjahr</span>
+        </div>
         <div id="myFoto">
-            <img src="./images/myFoto.png" />
+            <img src="./img/myFoto.png" />
         </div>
     </div>
 
+    <div id="games">
+        <div class="games-container">
+            <div class="card one">
+                <div class="card-image">
+                    <img class="imgOne" src="./img/pac-man.jpg" onclick="createPopupWin('https://www.google.com/logos/2010/pacman10-i.html',
+                        'PacMan', 800, 500);" />
+                </div>
+                <!-- <div class="card-title title-white">
+                    <p>Card One</p>
+                </div> -->
+            </div>
+            <div class="card two">
+                <div class="card-image">
+                    <img class="imgTwo" src="./img/subwaySurfers.jpg" onclick="createPopupWin('https://poki.de/g/subway-surfers?campaign=15143551887&adgroup=134943959011&target=aud-1419837971980:dsa-1408254911189&location=1002875&creative=558313188654&placement=&gclid=Cj0KCQiApL2QBhC8ARIsAGMm-KHK38a8qmXFF_vZUi7w7C0JjriPIAhSqHjC1POINhImrhZ_Q0px8n0aAlJfEALw_wcB',
+                    'SubwaySurfers', 800, 500);" />
+                </div>
+                <!-- <div class="card-title title-white">
+                    <p>Card Two</p>
+                </div> -->
+            </div>
+            <div class="card three">
+                <div class="card-image">
+                    <img class="imgThree"
+                        src="./img/chromeDino.gif"
+                        onclick="createPopupWin('https://chromedino.com/',
+                    'SubwaySurfers', 800, 500);" />
+                </div>
+                <!-- <div class="card-title title-white">
+                    <p>Card Three</p>
+                </div> -->
+            </div>
+
+            <script>
+                function createPopupWin(pageURL, pageTitle,
+                    popupWinWidth, popupWinHeight) {
+                    var left = (screen.width - popupWinWidth) / 2;
+                    var top = (screen.height - popupWinHeight) / 4;
+
+                    var myWindow = window.open(pageURL, pageTitle,
+                        'resizable=yes, width=' + popupWinWidth
+                        + ', height=' + popupWinHeight + ', top='
+                        + top + ', left=' + left);
+                }
+            </script>
+        </div>
+    </div>
+
+    <div id="aboutMe">
+        <div class="aboutMe-container">
+            <h1>fuckkkkk</h1>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="contact-container">
+            <h1>offff</h1>
+        </div>
+    </div>
 
 </body>
 
