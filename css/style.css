@@ -98,6 +98,10 @@ html, body {
     white-space: nowrap;
 }
 
+#first-letter {
+    font-size: 130px;
+}
+
 #year {
     color: rgb(240, 240, 240);
     font-family: 'Amatic SC', cursive;
@@ -226,15 +230,40 @@ html, body {
 /*contact page*/
 
 .contact-container {
-    background-color: #00867b;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(to bottom right, rgba(2, 0, 36, 1) 0%, rgba(52, 9, 121, 1) 35%, rgba(239, 0, 255, 1) 100%);
     display: grid;
-    grid-template-columns: 1fr 2fr 6fr 50%;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 15% 10% 25% 50%;
+    grid-template-rows: 1fr 1fr 3fr 3fr 1fr 1fr;
     grid-template-areas:
-        " . . . . "
-        " . . . . "
-        " . . . . "
-        " . . . . ";
+        " . . . . . . "
+        " . . . . . . "
+        " . card4 . . . . "
+        " . . . . . . "
+        " . . . . . . "
+        " . . . . . . ";
+}
+
+.cardFour {
+    width: 800px;
+    height: 550px;
+    margin: auto;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cardFour:hover {
+    transform: scale(1.0, 1.0);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+        -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.cardFour {
+    grid-area: card4;
+    grid-row: 3 / 5;
+    grid-column: 2 / 6;
 }
