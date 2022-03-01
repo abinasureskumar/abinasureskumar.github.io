@@ -1,6 +1,6 @@
-* {
+html { 
     box-sizing: content-box;
-  }
+}
 
 html, body {
     /* height: 100%; */
@@ -138,8 +138,11 @@ html, body {
 /*Games page*/
 
 .games-container {
-    /* background-color: #000d86; */
     background-color: rgb(27, 27, 27);
+    background-image: url("../img/LTbackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
     width: 100%;
@@ -149,6 +152,11 @@ html, body {
         " . . . . . . . "
         " . card1 . card2 . card3 . "
         " . . . . . . . ";
+}
+
+.backgroundImg {
+    background-repeat: no-repeat;
+    width: auto;
 }
 
 /* CARD */
@@ -387,5 +395,9 @@ html, body {
     font-size: 25px;
     height: 40px;
     margin-top: 20px;
+    color: black;
+}
+
+.email-txt a:hover {
     color: black;
 }
