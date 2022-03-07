@@ -1,5 +1,6 @@
-html { 
+html {
     box-sizing: content-box;
+    font-family: 'Amatic SC', cursive;
 }
 
 html, body {
@@ -260,7 +261,7 @@ html, body {
 }
 
 .contactCard:hover {
-    transform: scale(0.9, 0.9);
+    transform: scale(0.95, 0.95);
     box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
         -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
@@ -288,8 +289,55 @@ html, body {
     font-weight: 600;
     font-size: 45px;
     height: 40px;
-    margin-top: 25px;
+    margin-top: -25px;
     color: black;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    font-family: 'Amatic SC', cursive;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+/* input[type=submit] {
+    background-color: #1504aa;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+  input[type=submit] {
+    background-color: #1504aa;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #5700a8;
+}
+
+/* Add a background color and some padding around the form */
+.containerrrr {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Telephone */
@@ -302,7 +350,7 @@ html, body {
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     cursor: pointer;
     transition: 0.4s;
-    
+
     grid-area: card6;
     grid-row: 2 / 3;
     grid-column: 3 / 4;
@@ -337,7 +385,7 @@ html, body {
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     cursor: pointer;
     transition: 0.4s;
-    
+
     grid-area: card7;
     grid-row: 3 / 4;
     grid-column: 2 / 4;
@@ -373,7 +421,7 @@ html, body {
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     cursor: pointer;
     transition: 0.4s;
-    
+
     grid-area: card8;
     grid-row: 3 / 5;
     grid-column: 3 / 4;

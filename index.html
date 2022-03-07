@@ -18,30 +18,7 @@
         <!-- <button onclick="topFunction()" id="myBtn">Top</button> -->
         <img id="up" src="img/up.png" onclick="topFunction()">
     </div>
-    <script>
-        //Get the button
-        var mybutton = document.getElementById("up");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            window.setTimeout(function () {
-                location.href = "./index.html";
-            }, 800); //changes URL to home page
-        }
-    </script>
     <div class="home-container">
         <div class="logo">
             <img src="./icons/LTSmiley6.png">
@@ -97,19 +74,6 @@
                     <p>Card Three</p>
                 </div> -->
             </div>
-
-            <script>
-                function createPopupWin(pageURL, pageTitle,
-                    popupWinWidth, popupWinHeight) {
-                    var left = (screen.width - popupWinWidth) / 2;
-                    var top = (screen.height - popupWinHeight) / 4;
-
-                    var myWindow = window.open(pageURL, pageTitle,
-                        'resizable=yes, width=' + popupWinWidth
-                        + ', height=' + popupWinHeight + ', top='
-                        + top + ', left=' + left);
-                }
-            </script>
         </div>
     </div>
 
@@ -130,6 +94,22 @@
                 <div class="card-title">
                     <p>Contact Me</p>
                 </div>
+                <div class="containerrrr">
+                    <form action="mailto:abinasureskumar@gmail.com" method="get" enctype="text/plain">
+
+                        <label for="subject">Name</label>
+                        <input type="text" id="subject" name="subject" placeholder="Your name / subject name..">
+
+                        <label for="UserMmail">E-Mail</label>
+                        <input type="text" id="UserMmail" name="UserMmail" placeholder="Your e-mail address..">
+
+                        <label for="body">Subject</label>
+                        <textarea type="text" id="body" name="body" placeholder="Write something.."
+                            style="height:100px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
 
             <div class="contactCard cardSix">
@@ -138,7 +118,7 @@
                     <img class="iconTel" src="./icons/telephone-fill.svg" />
                 </div>
                 <div class="TelNr">
-                    <p>079 944 23 97</p>
+                    <p>000 111 22 33</p>
                 </div>
             </div>
 
