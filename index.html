@@ -4,76 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/games.css">
     <script type="text/javascript" src="./js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-    <title>Abina Sureskumar</title>
     <link rel="icon" href="./icons/LTSmiley6.png" type="image/png" sizes="32x32">
+    <title>Abina Sureskumar</title>
+</head>
 
 <body>
-    <div class="arrowBack">
+    <!-- <div class="arrowBack"> -->
         <!-- <button onclick="topFunction()" id="myBtn">Top</button> -->
-        <img id="up" src="img/up.png" onclick="topFunction()">
-    </div>
+        <!-- <img id="up" src="img/up.png" onclick="topFunction()">
+    </div> -->
 
     <div class="home-container">
-        <div class="logo">
-            <img src="./icons/LTSmiley6.png">
+        <div class="itemOne">
+            <div class="logo">
+                <img src="./icons/LTSmiley6.png">
+            </div>
+            <div class="name">
+                <span id="firstName">A b i n a</span><br />
+                <span id="lastName">Sureskumar</span>
+            </div>
         </div>
-        <div class="name">
-            <span id="firstName">A b i n a</span><br />
-            <span id="lastName">Sureskumar</span>
-        </div>
-        <div class="navbar">
+        <div id="navbar" class="navbar">
             <a calss="active" href="./index.html" onclick="">Home</a>
             <a href="#games">Games</a>
             <a href="#aboutMe">About Me</a>
             <a href="#contact">Contact</a>
         </div>
-        <div class="jobTitle">
-            <span id="jobTitle"><span id="first-letter">A</span>pplikationsentwicklerin</span><br />
-            <span id="year">Lernende im 2.Lehrjahr</span>
+        <div id="sideNav">
+            <span class="openNav" onclick="openNav()">&#9776;</span>
+            <div id="mySidenav" class="sidenav">
+                <a class="closebtn" onclick="closeNav()">&times;</a>
+                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+                <a calss="active" href="./index.html" onclick="">Home</a>
+                <a href="#games">Games</a>
+                <a href="#aboutMe">About Me</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
+
         <div id="myFoto">
-            <img src="./img/myFoto.png" />
+            <img id="bigScreenFoto" src="./img/myFoto13.jpg" />
+            <img id="smallScreenFoto" src="./img/myFoto14.jpg" />
+        </div>
+        <div class="itemTwo">
+            <span id="jobTitle">Applikationsentwicklerin</span>
+            <span id="year">Lernende im 2.Lehrjahr</span>
         </div>
     </div>
 
-    <div id="games">
-        <div class="games-container">
-            <!-- <div>
-                <img class="backgroundImg" src="./img/LTbackground.jpg"/>
-            </div> -->
-            <div class="card one">
-                <div class="card-image">
-                    <img class="imgOne" src="./img/pac-man.jpg" onclick="createPopupWin('https://www.google.com/logos/2010/pacman10-i.html',
+    <div id="games" class="games-container">
+        <div class="card one">
+            <div class="card-image">
+                <img class="imgOne" src="./img/pac-man.jpg" onclick="createPopupWin('https://www.google.com/logos/2010/pacman10-i.html',
                         'PacMan', 800, 500);" />
-                </div>
-                <!-- <div class="card-title title-white">
+            </div>
+            <!-- <div class="card-title title-white">
                     <p>Card One</p>
                 </div> -->
-            </div>
-            <div class="card two">
-                <div class="card-image">
-                    <img class="imgTwo" src="./img/subwaySurfers.jpg" onclick="createPopupWin('https://poki.de/g/subway-surfers?campaign=15143551887&adgroup=134943959011&target=aud-1419837971980:dsa-1408254911189&location=1002875&creative=558313188654&placement=&gclid=Cj0KCQiApL2QBhC8ARIsAGMm-KHK38a8qmXFF_vZUi7w7C0JjriPIAhSqHjC1POINhImrhZ_Q0px8n0aAlJfEALw_wcB',
+        </div>
+        <div class="card two">
+            <div class="card-image">
+                <img class="imgTwo" src="./img/subwaySurfers.jpg" onclick="createPopupWin('https://poki.de/g/subway-surfers?campaign=15143551887&adgroup=134943959011&target=aud-1419837971980:dsa-1408254911189&location=1002875&creative=558313188654&placement=&gclid=Cj0KCQiApL2QBhC8ARIsAGMm-KHK38a8qmXFF_vZUi7w7C0JjriPIAhSqHjC1POINhImrhZ_Q0px8n0aAlJfEALw_wcB',
                     'SubwaySurfers', 800, 500);" />
-                </div>
-                <!-- <div class="card-title title-white">
+            </div>
+            <!-- <div class="card-title title-white">
                     <p>Card Two</p>
                 </div> -->
-            </div>
-            <div class="card three">
-                <div class="card-image">
-                    <img class="imgThree" src="./img/chromeDino.gif" onclick="createPopupWin('https://chromedino.com/',
+        </div>
+        <div class="card three">
+            <div class="card-image">
+                <img class="imgThree" src="./img/chromeDino.gif" onclick="createPopupWin('https://chromedino.com/',
                     'SubwaySurfers', 800, 500);" />
-                </div>
-                <!-- <div class="card-title title-white">
+            </div>
+            <!-- <div class="card-title title-white">
                     <p>Card Three</p>
                 </div> -->
-            </div>
         </div>
     </div>
 

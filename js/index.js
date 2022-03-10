@@ -1,6 +1,8 @@
 // scroll to top button
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
+// window.onresize = function () { idk() };
+
 
 function scrollFunction() {
     console.log(document.documentElement.scrollTop)
@@ -22,6 +24,19 @@ function topFunction() {
     }, 800); //changes URL to home page
 }
 
+
+// sidenav
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+}
+
+// when clicked outside + on closebtn then close nav (now only closes when clicked on button)
+// when nav is shown then click on outside close,but only when nav is shown otherwise not
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
 // popup window (cards)
 function createPopupWin(pageURL, pageTitle,
     popupWinWidth, popupWinHeight) {
@@ -33,3 +48,4 @@ function createPopupWin(pageURL, pageTitle,
         + ', height=' + popupWinHeight + ', top='
         + top + ', left=' + left);
 }
+
