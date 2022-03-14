@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/games.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <script type="text/javascript" src="./js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +18,11 @@
 </head>
 
 <body>
-    <!-- <div class="arrowBack"> -->
+    <div class="arrowBack">
         <!-- <button onclick="topFunction()" id="myBtn">Top</button> -->
-        <!-- <img id="up" src="img/up.png" onclick="topFunction()">
-    </div> -->
-
-    <div class="home-container">
+        <img id="up" src="img/up.png" onclick="topFunction()">
+    </div>
+    <div id="home" class="home-container">
         <div class="itemOne">
             <div class="logo">
                 <img src="./icons/LTSmiley6.png">
@@ -37,15 +38,15 @@
             <a href="#aboutMe">About Me</a>
             <a href="#contact">Contact</a>
         </div>
-        <div id="sideNav">
+        <div id="sideNavigation">
             <span class="openNav" onclick="openNav()">&#9776;</span>
-            <div id="mySidenav" class="sidenav">
+            <div id="Sidenav" class="sidenav">
                 <a class="closebtn" onclick="closeNav()">&times;</a>
                 <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-                <a calss="active" href="./index.html" onclick="">Home</a>
-                <a href="#games">Games</a>
-                <a href="#aboutMe">About Me</a>
-                <a href="#contact">Contact</a>
+                <a href="./index.html" onclick="">Home</a>
+                <a href="#games" onclick="return closeNav();">Games</a>
+                <a href="#aboutMe" onclick="return closeNav();">About Me</a>
+                <a href="#contact" onclick="return closeNav();">Contact</a>
             </div>
         </div>
 
@@ -54,10 +55,14 @@
             <img id="smallScreenFoto" src="./img/myFoto14.jpg" />
         </div>
         <div class="itemTwo">
+            <!-- <span id="jobTitle"><span id="first-letter">A</span>pplikationsentwicklerin</span> -->
             <span id="jobTitle">Applikationsentwicklerin</span>
             <span id="year">Lernende im 2.Lehrjahr</span>
+            <!-- <span id="jobTitle"><span id="first-letter">A</span>pplikationsentwicklerin</span><br/>
+            <span id="year">Lernende im 2.Lehrjahr</span> -->
         </div>
     </div>
+
 
     <div id="games" class="games-container">
         <div class="card one">
@@ -95,67 +100,87 @@
         </div>
     </div>
 
-    <div id="contact">
-        <div class="contact-container">
-            <div class="cardFour">
-                <!-- background card -->
+    <div id="contact" class="contact-container">
+        <div class="cardFour">
+            <!-- background card -->
+        </div>
+
+
+        <div class="contactCard cardFive">
+            <!-- send E-mail directly -->
+            <div class="card-title">
+                <!-- instead of this -> leave a message -->
+                <p>Leave a message :)</p>
             </div>
+            <div class="message-container">
+                <form action="mailto:abinasureskumar@gmail.com" method="get" enctype="text/plain">
 
-            <div class="contactCard cardFive">
-                <!-- send E-mail directly -->
-                <div class="card-title">
-                    <p>Contact Me</p>
-                </div>
-                <div class="containerrrr">
-                    <form action="mailto:abinasureskumar@gmail.com" method="get" enctype="text/plain">
+                    <label for="subject">Name</label>
+                    <input type="text" id="subject" name="subject" placeholder="Your name / subject name..">
 
-                        <label for="subject">Name</label>
-                        <input type="text" id="subject" name="subject" placeholder="Your name / subject name..">
+                    <label for="UserMmail">E-Mail</label>
+                    <input type="text" id="UserMmail" name="UserMmail" placeholder="Your e-mail address..">
 
-                        <label for="UserMmail">E-Mail</label>
-                        <input type="text" id="UserMmail" name="UserMmail" placeholder="Your e-mail address..">
+                    <label for="body">Subject</label>
+                    <textarea type="text" calss="subject-txt" id="body" name="body" placeholder="Write something.."
+                        style="height:6.5vw"></textarea>
 
-                        <label for="body">Subject</label>
-                        <textarea type="text" id="body" name="body" placeholder="Write something.."
-                            style="height:100px"></textarea>
-
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
+            <!-- <div class="message-container">
+                <form method="post" action="form.php" enctype="text/plain">
 
-            <div class="contactCard cardSix">
-                <!-- telephone -->
-                <div class="Telephone">
-                    <img class="iconTel" src="./icons/telephone-fill.svg" />
-                </div>
-                <div class="TelNr">
-                    <p>000 111 22 33</p>
-                </div>
+                    <label for="name">Name</label>
+                    <input type="text" id="subject" name="name" <?php echo $name;?> placeholder="Your name">
+
+                    <label for="Email">E-Mail</label>
+                    <input type="text" id="UserMmail" name="email" <?php echo $email;?> placeholder="Your e-mail address..">
+
+                    <label for="message">Message</label>
+                    <textarea type="text" id="message" name="message" <?php echo $message;?> placeholder="Write something.."
+                        style="height:6.5vw"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div> -->
+        </div>
+
+
+        <div class="contactCard cardSix">
+            <!-- telephone -->
+            <div class="Telephone">
+                <img class="iconTel" src="./icons/telephone-fill.svg" />
             </div>
-
-            <div class="contactCard cardSeven">
-                <!-- address -->
-                <div class="Location">
-                    <img class="iconGeo" src="./icons/geo-alt-fill.svg" />
-                </div>
-                <div class="location-txt">
-                    <p>Zürich</p>
-                </div>
-            </div>
-
-            <div class="contactCard cardEight">
-                <!-- email -->
-                <div class="Email">
-                    <img class="iconEmail" src="./icons/envelope-fill.svg" />
-                </div>
-                <div class="email-txt">
-                    <a href="mailto:abina.sureskumar@swisscom.com">Business E-mail</a><br>
-                    <a href="mailto:abinasureskumar@gmail.com">Private E-mail</a>
-                </div>
+            <div class="TelNr">
+                <p>000 111 22 33</p>
             </div>
         </div>
+
+        <div class="contactCard cardSeven" onclick="createPopupWin('https://www.google.ch/maps/place/Z%C3%BCrich/@47.0221463,7.0746251,7.88z/data=!4m13!1m7!3m6!1s0x47900b9749bea219:0xe66e8df1e71fdc03!2zWsO8cmljaA!3b1!8m2!3d47.3768866!4d8.541694!3m4!1s0x47900b9749bea219:0xe66e8df1e71fdc03!8m2!3d47.3768866!4d8.541694?hl=de',
+        'Location', 800, 500);">
+            <!-- address -->
+            <div class="Location">
+                <img class="iconGeo" src="./icons/geo-alt-fill.svg" />
+            </div>
+            <div class="location-txt">
+                <p>Zürich</p>
+            </div>
+        </div>
+
+        <div class="contactCard cardEight">
+            <!-- email -->
+            <div class="myEmail">
+                <img class="iconEmail" src="./icons/envelope-fill.svg" />
+            </div>
+            <div class="myemail-txt">
+                <a href="mailto:abina.sureskumar@swisscom.com">Business E-mail</a><br>
+                <a href="mailto:abinasureskumar@gmail.com">Private E-mail</a>
+            </div>
+        </div>
+
     </div>
+
 </body>
 
 </html>

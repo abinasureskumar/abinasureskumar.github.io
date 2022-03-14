@@ -1,0 +1,8 @@
+/*about me page*/
+
+.aboutMe-container {
+  background-color: #040105;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}

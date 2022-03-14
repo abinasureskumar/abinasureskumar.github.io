@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/games.css">
+    <link rel="stylesheet" href="./css/random.css">
     <script type="text/javascript" src="./js/index.js"></script>
     <title>Document</title>
 </head>
@@ -37,29 +37,6 @@
     </script>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-    <script>
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
     <div id="off">
         <div class="off-container">
             <h1>offff</h1>
@@ -70,5 +47,44 @@
     </div>
 
 </body>
+
+<!-- <form>
+
+                        <label for="subject">Name</label>
+                        <input type="text" id="subject" name="subject" placeholder="Your name / subject name..">
+
+                        <label for="UserMmail">E-Mail</label>
+                        <input type="text" id="UserMmail" name="UserMmail" placeholder="Your e-mail address..">
+
+                        <label for="body">Message</label>
+                        <textarea id="body" name="body" placeholder="Write something.."
+                            style="height:100px"></textarea>
+
+                        <!-- <input type="submit" value="Submit"> -->
+                        <!-- <button class="buttonOne" onclick="sendMail(); return false">Submit</button> -->
+                        <!-- <button id="sender" onclick="sendMail(); return false">Send</button>
+                    </form> -->
+
+                    <!-- <script>
+                        // function sendMail() {
+                        //     var link = "mailto:abinasureskumar@gmail.com"
+                        //         + "subject=" + encodeURIComponent(document.getElementById('subject').value)
+                        //         + "&body=" + encodeURIComponent(document.getElementById('subject').value)
+                        //          ;
+
+                        //     window.location.href = link;
+                        // }
+                        
+                        
+                            // function sendMail() {
+                            //     var email = document.getElementById('UserEmail').value
+                            //     var subject = encodeURIComponent(document.getElementById('subject').value)
+                            //     var body = encodeURIComponent(document.getElementById('body').value)
+                            //     var link = "mailto:abinasureskumar@gmail.com" + '?subject=' + subject + '&body=' + body;
+
+                            //     window.location.href = link;
+                            // }
+
+                    </script> -->
 
 </html>
