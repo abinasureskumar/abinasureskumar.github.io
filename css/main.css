@@ -50,21 +50,21 @@ html, body {
         font-size: 32px;
     }
 
-    #bigScreenFoto {
+    /* #bigScreenFoto {
         display: block;
         width: 65vw;
     }
 
     #smallScreenFoto {
         display: none;
-    }
+    } */
 
     #sideNavigation {
         display: none !important;
     }
 
     .navbar a {
-    font-size: 2.5vw;
+        font-size: 2.5vw;
     }
 }
 
@@ -126,15 +126,14 @@ html, body {
         font-size: 6vw;
     }
 
-    #bigScreenFoto {
+    /* #bigScreenFoto {
         display: none;
     }
 
     #smallScreenFoto {
         display: block;
         width: 60vw;
-        /* width: 60%; */
-    }
+    } */
 
     .navbar {
         display: none !important;
@@ -157,15 +156,14 @@ html, body {
         width: 9vw;
     }
 
-    #bigScreenFoto {
+    /* #bigScreenFoto {
         display: none;
     }
 
     #smallScreenFoto {
         display: block;
         width: 100vw;
-        /* width: 60%; */
-    }
+    } */
 }
 
 /**
@@ -179,7 +177,12 @@ html, body {
     width: 100%;
     height: 100vh;
     display: flex;
-
+    cursor: url(../icons/LTSmiley2.jpg)
+    /* background-image: url(../img/marvelSpider2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: 100%; */
 }
 
 .itemOne {
@@ -368,11 +371,7 @@ html, body {
     /* font-size: 4vw; */
 }
 
-#myFoto {
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-    position: absolute;
-    left: 0;
-    right: 0;
+#marvelSpider {
+    width: 100%;
 }
+

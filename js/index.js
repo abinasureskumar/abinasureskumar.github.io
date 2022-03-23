@@ -5,6 +5,7 @@ window.addEventListener('mouseup', function (event) {
     closeNav();
 })
 
+
 function scrollEvent() {
     //Get the button
     var mybutton = document.getElementById("up");
@@ -52,4 +53,3 @@ function createPopupWin(pageURL, pageTitle,
         + ', height=' + popupWinHeight + ', top='
         + top + ', left=' + left);
 }
-
