@@ -30,27 +30,31 @@
   /* justify-content: space-around; */
 }
 
-figure{
+/* swinging spiderman */
+figure {
   margin-top: 0px;
 }
 
 figure img {
   width: 50%;
-  margin-left: 30%;
-  /* margin-top: -0.95vw; */
+  /* margin-left: 30%; */
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(114, 114, 114, 0.603));
+  filter: drop-shadow(7px 8px 8px rgba(114, 114, 114, 0.603));
 }
 
 .swing {
   animation: swing ease-in-out 1s infinite alternate;
   transform-origin: center -20px;
-  float:left;
+  float: left;
 }
 
-.swing:after{
+.swing:after {
   content: '';
-  position: absolute;  
-  width: 20px; height: 20px;  
-  top: -10px; left: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  /* left: 50%; */
   z-index: 0;
   border-bottom: none;
   border-right: none;
@@ -58,9 +62,16 @@ figure img {
 }
 
 @keyframes swing {
-  0% { transform: rotate(3deg); }
-  100% { transform: rotate(-3deg); }
+  0% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
 }
+
+
 
 /* card */
 .gameCard {
@@ -184,8 +195,8 @@ figure img {
   color: #a30506;
   /* background-color: rgba(0, 17, 255, 0.438); */
   transform: scale(0.95, 0.95);
-    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-        -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 
 .choose-insect-btn:active {

@@ -177,7 +177,6 @@ html, body {
     width: 100%;
     height: 100vh;
     display: flex;
-    cursor: url(../icons/LTSmiley2.jpg)
     /* background-image: url(../img/marvelSpider2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -190,6 +189,13 @@ html, body {
     position: absolute;
     left: 0;
     right: 0;
+    cursor: pointer;
+}
+
+.instagramLink {
+    /* position: absolute; */
+     z-index: 9999;
+     text-decoration: none;
 }
 
 .logo {
