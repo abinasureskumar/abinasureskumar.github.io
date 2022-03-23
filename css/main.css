@@ -193,9 +193,9 @@ html, body {
 }
 
 .instagramLink {
-    /* position: absolute; */
-     z-index: 9999;
-     text-decoration: none;
+    position: absolute;
+    z-index: 9999;
+    text-decoration: none;
 }
 
 .logo {
@@ -380,4 +380,3 @@ html, body {
 #marvelSpider {
     width: 100%;
 }
-
